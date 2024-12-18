@@ -1,0 +1,174 @@
+/* Cabeçalho */
+.cabecalho__container{
+    display: flex; /*deixa os elementos livres, um ao lado do outro*/
+    justify-content: space-between;/*organiza os elementos*/
+    align-items: center;/*alinha os itens ao centro da linha*/
+    position: fixed;/*deixa a barra fixa*/
+    top: 0;/*distancia do topo*/
+}
+
+.cabecalho__pesquisar__item
+{
+    display: none;/*deixa sem barra de pesquisa para futuramente colocala sobre uma condição*/
+
+}
+
+/* SESSÃO SUPERIOR */
+.superior__secao__container
+{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;/*deixa os elementos com 2 palavras na mesma linha*/
+    overflow: scroll;/*coloca uma barra de pesquisa*/
+    gap: 15px;/*Aplica espaçamento entre os itens*/
+    
+}
+
+
+
+.rodape__container/*rodapé*/
+{
+    display: flex;
+    /*coloca em colunas*/
+    /*flex-direction: column; 
+    flex-wrap: wrap;*/
+    /*wrap permite a quebra de colunas em mais colunas*/
+    flex-flow: column wrap;
+    /* metodo de fazer aquelas duas linhas virar uma */
+}
+
+
+.menu__container
+{   
+    position: fixed;
+    bottom: 0%;
+    height: 74px;
+    width: 100%;
+}
+
+
+.menu__lista
+{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+
+.menu__lista li
+{
+    align-self: center;/*propriedade item, aplica diretamente o item*/
+    /* pode alinhar cada item de acordo com o que deseja */
+}
+
+
+.menu__itens
+{
+    display: flex;
+    flex-direction: column;/*coloca os itens de linha para coluna*/
+    gap: 5px;
+}
+
+@media (min-width: 834px)/*coloca a condição para usar elementos*/
+{   
+    /* CABEÇALHO */
+    .cabecalho__pesquisar__item
+    {
+        display: block;/*coloca o display para telas maiores que 834px*/
+    }
+
+    /* RODAPÉ */
+    .rodape__container
+    {
+        justify-content: space-between;/*coloca espaçamento para telas maiores que 834px*/
+    }/*aqui é pro rodapé*/
+
+    .menu__container
+    {   
+        position: fixed;
+        bottom: 0%;
+        height: 100%;
+        width: 74px;
+        top: 80px;
+    }
+
+    .menu__lista
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 35px;
+    }
+
+}
+
+@media(min-width: 1350px)
+{
+    .menu__container
+    {
+        height: auto;
+        width: 239px;
+        overflow: scroll;/*barra de rolagem*/
+    }
+
+    menu__lista:nth-child(2),
+    menu__lista:nth-child(3),
+    menu__lista:nth-child(4){
+        display: flex;
+    }
+
+    .superior__secao__container
+    {
+        margin-left: 154px;
+        width: auto;
+    }
+
+    .rodape__container{/*rodapé*/
+        margin-left: 200px;
+        margin-right: auto;
+        justify-content: space-between;
+        width: auto;
+        flex-direction: row; 
+    }
+
+    .menu__lista
+    {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens
+    {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3)
+    {
+        flex-direction: column-reverse;
+    }
+
+    .jogos
+    {
+        order: 3;
+    }
+    
+    .filmes
+    {
+        order: 2;
+    }
+
+    .premium
+    {
+        order: 1;
+    }
+
+    .maispagina
+    {
+        order: 4;
+    }
+
+}
