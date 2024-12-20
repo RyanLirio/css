@@ -24,7 +24,12 @@
     
 }
 
-
+/* VIDEO */
+.videos__item
+{
+    height: 303px;
+    width: 280px;
+}
 
 .rodape__container/*rodapé*/
 {
@@ -69,6 +74,12 @@
     gap: 5px;
 }
 
+.menu__lista:nth-child(2),
+menu__lista:nth-child(3),
+menu__lista:nth-child(4){
+    display: none;
+}
+
 @media (min-width: 834px)/*coloca a condição para usar elementos*/
 {   
     /* CABEÇALHO */
@@ -85,16 +96,14 @@
 
     .menu__container
     {   
-        position: fixed;
-        bottom: 0%;
-        height: 100%;
+        left: 0;
+        height: auto;
         width: 74px;
         top: 80px;
     }
 
     .menu__lista
     {
-        display: flex;
         flex-direction: column;
         justify-content: flex-start;
         padding-top: 15px;
@@ -107,12 +116,11 @@
 {
     .menu__container
     {
-        height: auto;
-        width: 239px;
+        width: 17%;
         overflow: scroll;/*barra de rolagem*/
     }
 
-    menu__lista:nth-child(2),
+    .menu__lista:nth-child(2),
     menu__lista:nth-child(3),
     menu__lista:nth-child(4){
         display: flex;
@@ -120,16 +128,8 @@
 
     .superior__secao__container
     {
-        margin-left: 154px;
+        margin-left: 147px;
         width: auto;
-    }
-
-    .rodape__container{/*rodapé*/
-        margin-left: 200px;
-        margin-right: auto;
-        justify-content: space-between;
-        width: auto;
-        flex-direction: row; 
     }
 
     .menu__lista
@@ -171,4 +171,37 @@
         order: 4;
     }
 
+    .rodape__container
+    {
+        width: auto;
+        padding-top: 20px;
+        padding-left: 14%;
+    }
+
+    .videos__container
+    {
+        display: flex;
+        padding-left: 17%;
+    }
+
+    .videos__item
+    {
+        padding-bottom: 15px;
+    }
+}
+
+.videos__container
+{
+    width: auto;
+    margin-left: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.videos__item
+{
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
 }
